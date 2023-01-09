@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมแปลงสกุลเงิน</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css">
+</head>
+
+<body>
+    <img src="img/money.png" class="img">
+    <h1>โปรแกรมแปลงสกุลเงิน</h1>
+    <div class="container">
+        <div class="currency">
+            <select name="" id="currency-1" style="width: 130px" class="currency-one">
+                <!-- ============= A Zone ============= -->
+                <option value="AED" id="ARE">AED</option>
+                <option value="AFN" id="AFG">AFN</option>
+                <option value="ALL" id="ALB">ALL</option>
+                <option value="AMD" id="ARM">AMD</option>
+                <option value="ANG" id="SXM">ANG</option>
+                <option value="AOA" id="AGO">AOA</option>
+                <option value="ARS" id="ARG">ARS</option>
+                <option value="AUD" id="AUS">AUD</option>
+                <option value="AWG" id="ABW">AWG</option>
+                <!-- ============= B Zone ============= -->
+                <option value="BAM" id="BIH">BAM</option>
+                <option value="BBD" id="BRB">BBD</option>
+                <option value="BDT" id="BGD">BDT</option>
+                <option value="BGN" id="BGR">BGN</option>
+                <option value="BHD" id="BHR">BHD</option>
+                <option value="BIF" id="BDI">BIF</option>
+                <option value="BMD" id="BMU">BMD</option>
+                <option value="BND" id="BRN">BND</option>
+                <option value="BOB" id="BOL">BOB</option>
+                <option value="BRL" id="BRA">BRL</option>
+                <option value="BSD" id="BHS">BSD</option>
+                <option value="BTN" id="BTN">BTN</option>
+                <option value="BWP" id="BWA">BWP</option>
+                <option value="BYN" id="BLR">BYN</option>
+                <option value="BZD" id="BLZ">BZD</option>
+                <!-- ============= C Zone ============= -->
+                <option value="CAD" id="CAN">CAD</option>
+                <option value="CDF" id="COG">CDF</option>
+                <option value="CHF" id="LIE">CHF</option>
+                <option value="CLP" id="CHL">CLP</option>
+                <option value="CNY" id="CHN">CNY</option>
+                <option value="COP" id="COL">COP</option>
+                <option value="CRC" id="CRI">CRC</option>
+                <option value="CUP" id="cub">CUP</option>
+                <option value="CVE" id="CPV">CVE</option>
+                <option value="CZK" id="CZE">CZK</option>
+                <!-- ============= D Zone ============= -->
+                <option value="DJF" id="DJI">DJF</option>
+                <option value="DKK" id="GRL">DKK</option>
+                <option value="DOP" id="DOM">DOP</option>
+                <option value="DZD" id="DZA">DZD</option>
+                <!-- ============= E Zone ============= -->
+                <option value="EGP" id="EGY">EGP</option>
+                <option value="ERN" id="ERI">ERN</option>
+                <option value="ETB" id="ETH">ETB</option>
+                <option value="EUR" id="EUR">EUR</option>
+                <!-- ============= F Zone ============= -->
+                <option value="FJD" id="FJI">FJD</option>
+                <option value="FKP" id="FLK">FKP</option>
+                <option value="FOK" id="FRO">FOK</option>
+                <!-- ============= G Zone ============= -->
+                <option value="GBP" id="GBR">GBP</option>
+                <option value="GEL" id="GEO">GEL</option>
+                <option value="GGP" id="GGY">GGP</option>
+                <option value="GHS" id="GHA">GHS</option>
+                <option value="GIP" id="GIB">GIP</option>
+                <option value="GMD" id="GMB">GMD</option>
+                <option value="GNF" id="GIN">GNF</option>
+                <option value="GTQ" id="GTM">GTQ</option>
+                <option value="GYD" id="GUY">GYD</option>
+                <!-- ============= H Zone ============= -->
+                <option value="HKD" id="HKG">HKD</option>
+                <option value="HNL" id="HND">HNL</option>
+                <option value="HRK" id="HRV">HRK</option>
+                <option value="HTG" id="HTI">HTG</option>
+                <option value="HUF" id="HUN">HUF</option>
+                <!-- ============= I Zone ============= -->
+                <option value="IDR" id="IDN">IDR</option>
+                <option value="ILS" id="ISR">ILS</option>
+                <option value="IMP" id="IMN">IMP</option>
+                <option value="INR" id="IND">INR</option>
+                <option value="IQD" id="IRQ">IQD</option>
+                <option value="IRR" id="IRN">IRR</option>
+                <option value="ISK" id="ISL">ISK</option>
+                <!-- ============= J Zone ============= -->
+                <option value="JEP" id="JEY">JEP</option>
+                <option value="JMD" id="JAM">JMD</option>
+                <option value="JOD" id="JOR">JOD</option>
+                <option value="JPY" id="JPN">JPY</option>
+                <!-- ============= K Zone ============= -->
+                <option value="KES" id="KEN">KES</option>
+                <option value="KGS" id="KGZ">KGS</option>
+                <option value="KHR" id="KHM">KHR</option>
+                <option value="KID" id="KIR">KID</option>
+                <option value="KMF" id="COM">KMF</option>
+                <option value="KRW" id="KOR">KRW</option>
+                <option value="KWD" id="KWT">KWD</option>
+                <option value="KYD" id="CYM">KYD</option>
+                <option value="KZT" id="KAZ">KZT</option>
+                <!-- ============= L Zone ============= -->
+                <option value="LAK" id="LAO">LAK</option>
+                <option value="LBP" id="LBN">LBP</option>
+                <option value="LKR" id="LKA">LKR</option>
+                <option value="LRD" id="LBR">LRD</option>
+                <option value="LSL" id="LSO">LSL</option>
+                <option value="LYD" id="LBY">LYD</option>
+                <!-- ============= M Zone ============= -->
+                <option value="MAD" id="ESH">MAD</option>
+                <option value="MDL" id="MDA">MDL</option>
+                <option value="MGA" id="MDG">MGA</option>
+                <option value="MKD" id="MKD">MKD</option>
+                <option value="MMK" id="MMR">MMK</option>
+                <option value="MNT" id="MNG">MNT</option>
+                <option value="MOP" id="MAC">MOP</option>
+                <option value="MRU" id="MRT">MRU</option>
+                <option value="MUR" id="MUS">MUR</option>
+                <option value="MVR" id="MDV">MVR</option>
+                <option value="MWK" id="MWI">MWK</option>
+                <option value="MXN" id="MEX">MXN</option>
+                <option value="MYR" id="MYS">MYR</option>
+                <option value="MZN" id="MOZ">MZN</option>
+                <!-- ============= N Zone ============= -->
+                <option value="NAD" id="NAM">NAD</option>
+                <option value="NGN" id="NGA">NGN</option>
+                <option value="NIO" id="NIC">NIO</option>
+                <option value="NOK" id="SJM">NOK</option>
+                <option value="NPR" id="NPL">NPR</option>
+                <option value="NZD" id="NZL">NZD</option>
+                <!-- ============= O Zone ============= -->
+                <option value="OMR" id="OMN">OMR</option>
+                <!-- ============= P Zone ============= -->
+                <option value="PAB" id="PAN">PAB</option>
+                <option value="PEN" id="PER">PEN</option>
+                <option value="PGK" id="PNG">PGK</option>
+                <option value="PHP" id="PHL">PHP</option>
+                <option value="PKR" id="PAK">PKR</option>
+                <option value="PLN" id="POL">PLN</option>
+                <option value="PYG" id="PRY">PYG</option>
+                <!-- ============= Q Zone ============= -->
+                <option value="QAR" id="QAT">QAR</option>
+                <!-- ============= R Zone ============= -->
+                <option value="RON" id="ROU">RON</option>
+                <option value="RSD" id="SRB">RSD</option>
+                <option value="RUB" id="RUS">RUB</option>
+                <option value="RWF" id="RWA">RWF</option>
+                <!-- ============= S Zone ============= -->
+                <option value="SAR" id="SAU">SAR</option>
+                <option value="SBD" id="SLB">SBD</option>
+                <option value="SCR" id="SYC">SCR</option>
+                <option value="SDG" id="SDN">SDG</option>
+                <option value="SEK" id="SWE">SEK</option>
+                <option value="SGD" id="SGP">SGD</option>
+                <option value="SHP" id="SHN">SHP</option>
+                <option value="SLE" id="SLE">SLE</option>
+                <option value="SLL" id="sierra leone">SLL</option>
+                <option value="SOS" id="SOM">SOS</option>
+                <option value="SRD" id="SUR">SRD</option>
+                <option value="SSP" id="SSD">SSP</option>
+                <option value="STN" id="STP">STN</option>
+                <option value="SYP" id="SYR">SYP</option>
+                <option value="SZL" id="SWZ">SZL</option>
+                <!-- ============= T Zone ============= -->
+                <option value="THB" id="THA">THB</option>
+                <option value="TJS" id="TJK">TJS</option>
+                <option value="TMT" id="TKM">TMT</option>
+                <option value="TND" id="TUN">TND</option>
+                <option value="TOP" id="TON">TOP</option>
+                <option value="TRY" id="TUR">TRY</option>
+                <option value="TTD" id="TTO">TTD</option>
+                <option value="TVD" id="TUV">TVD</option>
+                <option value="TWD" id="TWN">TWD</option>
+                <option value="TZS" id="TZA">TZS</option>
+                <!-- ============= U Zone ============= -->
+                <option value="UAH" id="UKR">UAH</option>
+                <option value="UGX" id="UGA">UGX</option>
+                <option value="USD" id="USA" selected>USD</option>
+                <option value="UYU" id="URY">UYU</option>
+                <option value="UZS" id="UZB">UZS</option>
+                <!-- ============= V Zone ============= -->
+                <option value="VES" id="VEN">VES</option>
+                <option value="VND" id="VNM">VND</option>
+                <option value="VUV" id="VUT">VUV</option>
+                <!-- ============= W Zone ============= -->
+                <option value="WST" id="WSM">WST</option>
+                <!-- ============= X Zone ============= -->
+                <option value="XAF" id="GAB">XAF</option>
+                <option value="XCD" id="AIA">XCD</option>
+                <option value="XOF" id="BEN">XOF</option>
+                <option value="XPF" id="PYF">XPF</option>
+                <!-- ============= Y Zone ============= -->
+                <option value="YER" id="YEM">YER</option>
+                <!-- ============= Z Zone ============= -->
+                <option value="ZAR" id="ZAF">ZAR</option>
+                <option value="ZMW" id="ZMB">ZMW</option>
+                <option value="ZWL" id="ZWE">ZWL</option>
+            </select>
+            <input type="number" name="" id="amount-1" value="1">
+        </div>
+        <div class="swap-container">
+            <button class="btn">สลับสกุลเงิน</button>
+            <div class="rate" id="rate">อัตราการแลกเปลี่ยน</div>
+        </div>
+        <div class="currency">
+            <select name="2" id="currency-2" style="width: 130px" class="currency-two">
+                <option value="AED" id="AE">AED</option>
+                <option value="AFN" id="AF">AFN</option>
+                <option value="ALL" id="AL">ALL</option>
+                <option value="AMD" id="AM">AMD</option>
+                <option value="ANG" id="SX">ANG</option>
+                <option value="AOA" id="AO">AOA</option>
+                <option value="ARS" id="AR">ARS</option>
+                <option value="AUD" id="AU">AUD</option>
+                <option value="AWG" id="AW">AWG</option>
+                <option value="AZN" id="AZ">AZN</option>
+                <!-- ============= B Zone ============= -->
+                <option value="BAM" id="BA">BAM</option>
+                <option value="BBD" id="BB">BBD</option>
+                <option value="BDT" id="BD">BDT</option>
+                <option value="BGN" id="BG">BGN</option>
+                <option value="BHD" id="BH">BHD</option>
+                <option value="BIF" id="BI">BIF</option>
+                <option value="BMD" id="BM">BMD</option>
+                <option value="BND" id="BN">BND</option>
+                <option value="BOB" id="BO">BOB</option>
+                <option value="BRL" id="BR">BRL</option>
+                <option value="BSD" id="BS">BSD</option>
+                <option value="BTN" id="BT">BTN</option>
+                <option value="BWP" id="BW">BWP</option>
+                <option value="BYN" id="BY">BYN</option>
+                <option value="BZD" id="BZ">BZD</option>
+                <!-- ============= C Zone ============= -->
+                <option value="CAD" id="CA">CAD</option>
+                <option value="CDF" id="CG">CDF</option>
+                <option value="CHF" id="LI">CHF</option>
+                <option value="CLP" id="CL">CLP</option>
+                <option value="CNY" id="CN">CNY</option>
+                <option value="COP" id="CO">COP</option>
+                <option value="CRC" id="CR">CRC</option>
+                <option value="CUP" id="cu">CUP</option>
+                <option value="CVE" id="CV">CVE</option>
+                <option value="CZK" id="CZ">CZK</option>
+                <!-- ============= D Zone ============= -->
+                <option value="DJF" id="DJ">DJF</option>
+                <option value="DKK" id="GL">DKK</option>
+                <option value="DOP" id="DO">DOP</option>
+                <option value="DZD" id="DZ">DZD</option>
+                <!-- ============= E Zone ============= -->
+                <option value="EGP" id="EG">EGP</option>
+                <option value="ERN" id="ER">ERN</option>
+                <option value="ETB" id="ET">ETB</option>
+                <option value="EUR" id="EU">EUR</option>
+                <!-- ============= F Zone ============= -->
+                <option value="FJD" id="FJ">FJD</option>
+                <option value="FKP" id="FK">FKP</option>
+                <option value="FOK" id="FO">FOK</option>
+                <!-- ============= G Zone ============= -->
+                <option value="GBP" id="GB">GBP</option>
+                <option value="GEL" id="GE">GEL</option>
+                <option value="GGP" id="GG">GGP</option>
+                <option value="GHS" id="GH">GHS</option>
+                <option value="GIP" id="GI">GIP</option>
+                <option value="GMD" id="GM">GMD</option>
+                <option value="GNF" id="GN">GNF</option>
+                <option value="GTQ" id="GT">GTQ</option>
+                <option value="GYD" id="GY">GYD</option>
+                <!-- ============= H Zone ============= -->
+                <option value="HKD" id="HK">HKD</option>
+                <option value="HNL" id="HN">HNL</option>
+                <option value="HRK" id="HR">HRK</option>
+                <option value="HTG" id="HT">HTG</option>
+                <option value="HUF" id="HU">HUF</option>
+                <!-- ============= I Zone ============= -->
+                <option value="IDR" id="ID">IDR</option>
+                <option value="ILS" id="IL">ILS</option>
+                <option value="IMP" id="IM">IMP</option>
+                <option value="INR" id="IN">INR</option>
+                <option value="IQD" id="IQ">IQD</option>
+                <option value="IRR" id="IR">IRR</option>
+                <option value="ISK" id="IS">ISK</option>
+                <!-- ============= J Zone ============= -->
+                <option value="JEP" id="JE">JEP</option>
+                <option value="JMD" id="JM">JMD</option>
+                <option value="JOD" id="JO">JOD</option>
+                <option value="JPY" id="JP">JPY</option>
+                <!-- ============= K Zone ============= -->
+                <option value="KES" id="KE">KES</option>
+                <option value="KGS" id="KG">KGS</option>
+                <option value="KHR" id="KH">KHR</option>
+                <option value="KID" id="KI">KID</option>
+                <option value="KMF" id="KM">KMF</option>
+                <option value="KRW" id="KR">KRW</option>
+                <option value="KWD" id="KW">KWD</option>
+                <option value="KYD" id="KY">KYD</option>
+                <option value="KZT" id="KZ">KZT</option>
+                <!-- ============= L Zone ============= -->
+                <option value="LAK" id="LA">LAK</option>
+                <option value="LBP" id="LB">LBP</option>
+                <option value="LKR" id="LK">LKR</option>
+                <option value="LRD" id="LR">LRD</option>
+                <option value="LSL" id="LS">LSL</option>
+                <option value="LYD" id="LY">LYD</option>
+                <!-- ============= M Zone ============= -->
+                <option value="MAD" id="EH">MAD</option>
+                <option value="MDL" id="MD">MDL</option>
+                <option value="MGA" id="MG">MGA</option>
+                <option value="MKD" id="MK">MKD</option>
+                <option value="MMK" id="MM">MMK</option>
+                <option value="MNT" id="MN">MNT</option>
+                <option value="MOP" id="MO">MOP</option>
+                <option value="MRU" id="MR">MRU</option>
+                <option value="MUR" id="MU">MUR</option>
+                <option value="MVR" id="MV">MVR</option>
+                <option value="MWK" id="MW">MWK</option>
+                <option value="MXN" id="MX">MXN</option>
+                <option value="MYR" id="MY">MYR</option>
+                <option value="MZN" id="MZ">MZN</option>
+                <!-- ============= N Zone ============= -->
+                <option value="NAD" id="NA">NAD</option>
+                <option value="NGN" id="NG">NGN</option>
+                <option value="NIO" id="NI">NIO</option>
+                <option value="NOK" id="SJ">NOK</option>
+                <option value="NPR" id="NP">NPR</option>
+                <option value="NZD" id="NZ">NZD</option>
+                <!-- ============= O Zone ============= -->
+                <option value="OMR" id="OM">OMR</option>
+                <!-- ============= P Zone ============= -->
+                <option value="PAB" id="PA">PAB</option>
+                <option value="PEN" id="PE">PEN</option>
+                <option value="PGK" id="PG">PGK</option>
+                <option value="PHP" id="PH">PHP</option>
+                <option value="PKR" id="PK">PKR</option>
+                <option value="PLN" id="PL">PLN</option>
+                <option value="PYG" id="PY">PYG</option>
+                <!-- ============= Q Zone ============= -->
+                <option value="QAR" id="QA">QAR</option>
+                <!-- ============= R Zone ============= -->
+                <option value="RON" id="RO">RON</option>
+                <option value="RSD" id="RS">RSD</option>
+                <option value="RUB" id="RU">RUB</option>
+                <option value="RWF" id="RW">RWF</option>
+                <!-- ============= S Zone ============= -->
+                <option value="SAR" id="SA">SAR</option>
+                <option value="SBD" id="SB">SBD</option>
+                <option value="SCR" id="SC">SCR</option>
+                <option value="SDG" id="SD">SDG</option>
+                <option value="SEK" id="SE">SEK</option>
+                <option value="SGD" id="SG">SGD</option>
+                <option value="SHP" id="SH">SHP</option>
+                <option value="SLE" id="SL">SLE</option>
+                <option value="SLL" id="694">SLL</option>
+                <option value="SOS" id="SO">SOS</option>
+                <option value="SRD" id="SR">SRD</option>
+                <option value="SSP" id="SS">SSP</option>
+                <option value="STN" id="ST">STN</option>
+                <option value="SYP" id="SY">SYP</option>
+                <option value="SZL" id="SZ">SZL</option>
+                <!-- ============= T Zone ============= -->
+                <option value="THB" id="TH" selected>THB</option>
+                <option value="TJS" id="TJ">TJS</option>
+                <option value="TMT" id="TM">TMT</option>
+                <option value="TND" id="TN">TND</option>
+                <option value="TOP" id="TO">TOP</option>
+                <option value="TRY" id="TR">TRY</option>
+                <option value="TTD" id="TT">TTD</option>
+                <option value="TVD" id="TV">TVD</option>
+                <option value="TWD" id="TW">TWD</option>
+                <option value="TZS" id="TZ">TZS</option>
+                <!-- ============= U Zone ============= -->
+                <option value="UAH" id="UA">UAH</option>
+                <option value="UGX" id="UG">UGX</option>
+                <option value="USD" id="US">USD</option>
+                <option value="UYU" id="UY">UYU</option>
+                <option value="UZS" id="UZ">UZS</option>
+                <!-- ============= V Zone ============= -->
+                <option value="VES" id="VE">VES</option>
+                <option value="VND" id="VN">VND</option>
+                <option value="VUV" id="VU">VUV</option>
+                <!-- ============= W Zone ============= -->
+                <option value="WST" id="WS">WST</option>
+                <!-- ============= X Zone ============= -->
+                <option value="XAF" id="GA">XAF</option>
+                <option value="XCD" id="AI">XCD</option>
+                <option value="XOF" id="BJ">XOF</option>
+                <option value="XPF" id="PF">XPF</option>
+                <!-- ============= Y Zone ============= -->
+                <option value="YER" id="YE">YER</option>
+                <!-- ============= Z Zone ============= -->
+                <option value="ZAR" id="ZA">ZAR</option>
+                <option value="ZMW" id="ZM">ZMW</option>
+                <option value="ZWL" id="ZW">ZWL</option>
+                <input type="number" name="" id="amount-2" value="1">
+        </div>
+    </div>
+    </section>
+    <script src="script.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</body>
+
+</html>
